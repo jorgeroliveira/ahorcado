@@ -46,8 +46,8 @@ public class Ahorcado {
         
         // Mientras que no nos pasemos con los intentos y no la acertemos...
         while(intentos < INTENTOS_TOTALES && aciertos != tusRespuestas.length){
-        	 System.out.println("intentos:"+intentos);
-        	 System.out.println("aciertos:"+aciertos);
+        	 System.out.println("Nº de intentos:"+intentos+"/7");
+        	 System.out.println("Nº de aciertos:"+aciertos);
             imprimeOculta(tusRespuestas);
             // Preguntamos mierdas por teclado
             System.out.println("\nIntroduce una letra: ");
