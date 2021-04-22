@@ -3,9 +3,9 @@ package gal.teis.ahorcado;
 import java.util.Scanner;
 
 /**
- * Juego del ahorcado en poco mas de media hora, mu simpleeeee
+ * Juego del ahorcado
  * 
- * @author victor
+ *
  */
 public class Ahorcado {
 
