@@ -5,7 +5,6 @@ import java.util.Scanner;
 /**
  * Juego del ahorcado
  * 
- *
  */
 public class Ahorcado {
 
@@ -13,9 +12,9 @@ public class Ahorcado {
 	 * @param args the command line arguments
 	 */
 	public static void main(String[] args) {
-		final int INTENTOS_TOTALES = 8; // Constante con el limite de fallos
-		// contadores de intentos y aciertos
-		int intentos = 0;
+		final int FALLOS_TOTALES = 8; // Constante con el limite de fallos
+		// contadores de fallos y aciertos
+		int fallos = 0;
 		int aciertos = 0;
 
 		Scanner teclado = new Scanner(System.in);
@@ -46,8 +45,8 @@ public class Ahorcado {
 			System.out.println("Adivina la palabra seleccionada!");
 
 			// Mientras que no nos pasemos con los intentos y no la acertemos...
-			while (intentos < INTENTOS_TOTALES && aciertos != tusRespuestas.length) {
-				System.out.println("Nº de intentos:" + intentos + "/" + INTENTOS_TOTALES);
+			while (fallos < FALLOS_TOTALES && aciertos != tusRespuestas.length) {
+				System.out.println("Nº de intentos:" + fallos + "/" + FALLOS_TOTALES);
 				System.out.println("Nº de aciertos:" + aciertos);
 				UtilAhorcado.imprimeRespuesta(tusRespuestas);
 				
@@ -67,7 +66,7 @@ public class Ahorcado {
 				
 				//Incrementamos el numero de intentos si hemos fallado con la letra
 				if (letraAcertada == false) {
-					intentos++;
+					fallos++;
 				}
 				letraAcertada = false;
 			}
@@ -82,9 +81,9 @@ public class Ahorcado {
 				System.out.print("\nAHORCADO! la palabra era: " + palabraSeleccionada );
 			}
 			// Reseteamos contadores
-			intentos = 0;
+			fallos = 0;
 			aciertos = 0;
-			// Volvemos a preguntarle al usuario si quiere volver a perder el tiempo
+			// Volvemos a preguntarle al usuario si quiere volver a jugar
 			resp = UtilAhorcado.pregunta("\n\nQuieres volver a jugar?", teclado);
 		} while (resp != 'n');
 
